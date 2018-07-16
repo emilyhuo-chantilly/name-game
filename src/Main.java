@@ -9,13 +9,16 @@ public class Main {
         String Name = getRandomName(OfficialList);
         //System.out.println(Name);
         String guess = "";
+        int counter = 0;
         while(true){
             guess = getInput();
             if(Name.equals(guess)) {
-                System.out.println("Congratulations! You guessed the randomly generated name!");
+                counter++;
+                System.out.println("Congratulations! You guessed the randomly generated name in " + counter +" tries!");
                 System.exit(1);
             }
             else{
+                counter++;
                 System.out.println("Sorry try again!");
             }
         }
@@ -41,7 +44,7 @@ public class Main {
         NameList[0] = "Sammy"; 
 	    NameList[1] = "Emily";
 	    NameList[2] = "Nick";
-	    NameList[3] = "Ashely";
+	    NameList[3] = "Ashley";
 	    NameList[4] = "David";
 	    NameList[5] = "Sarah";
 	    NameList[6] = "Liam";
